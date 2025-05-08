@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Code Saver';
+  src: url('/src/assets/fonts/CodeSaver.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+/* Optional: smooth transitions for dark mode or color theming */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Ensure spacing between skill filter buttons */
+.skill-filters button {
+  margin: 0.5rem;
+}
+
+/* Override styles for skill category labels */
+.skill-label {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  letter-spacing: 0.05em;
+  transition: transform 0.3s ease;
+}
+
+.skill-label:hover {
+  transform: scale(1.05);
+}
+
+/* Custom color styles for skill labels */
+.web-label {
+  background-color: #bfdbfe; 
+  color: #1e40af;
+}
+
+.mobile-label {
+  background-color: #bbf7d0; 
+  color: #065f46;
+}
+
+.creative-label {
+  background-color: #fbcfe8; 
+  color: #831843; 
+}
+
+
+.skill-card {
+  width: 100%;
+  height: 100%;
+  max-width: 180px;
+  min-height: 180px;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  padding: 1rem 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card-icon {
+  width: 64px;
+  height: 64px;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-card-icon:hover {
+  filter: grayscale(0%);
+}
+
+.skill-card-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1f2937; 
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+#skills {
+  position: relative;
+  z-index: 0;
+}
+
+#skills::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png"); */
+  background-repeat: repeat;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.about-panel {
+  font-family: 'Code Saver', monospace;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25vw;
+  height: 100vh;
+  background-color: #0d1117;
+  color: white;
+  z-index: 9999;
+  padding: 1.5rem;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
