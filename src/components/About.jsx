@@ -33,7 +33,7 @@ export default function About({ showPanel, setShowPanel }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-[9998]"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[9998]"
           />
 
           <motion.div
@@ -44,7 +44,7 @@ export default function About({ showPanel, setShowPanel }) {
             transition={{ type: 'spring', stiffness: 100 }}
             className="about-panel relative z-[9999]"
           >
-            {/* Icon-only close button with tooltip */}
+            {/* Close button with tooltip */}
             <div className="absolute top-4 right-4 group">
               <button
                 onClick={() => setShowPanel(false)}
